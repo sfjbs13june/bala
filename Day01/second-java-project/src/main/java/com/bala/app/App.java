@@ -8,6 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Greeting greeting = new Greeting();
+        String result= greeting.SayWelcome();
+        String result= greeting.SayHello();
+        String result= greeting.SayBye();
+        System.out.println(result);
     }
 }
