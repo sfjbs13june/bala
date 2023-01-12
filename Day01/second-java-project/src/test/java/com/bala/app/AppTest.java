@@ -1,4 +1,4 @@
-package com.rama.app;
+package com.bala.app;
 
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
