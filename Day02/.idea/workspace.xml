@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="54b26554-52f8-40e6-b46e-9481c20db6fe" name="Changes" comment="" />
+    <list default="true" id="54b26554-52f8-40e6-b46e-9481c20db6fe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Day01/second-java-project/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01/second-java-project/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01/second-java-project/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01/second-java-project/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01/second-java-project/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01/second-java-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Day01/second-java-project/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01/second-java-project/src/main/java/com/bala/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Day01/second-java-project/src/main/java/com/bala/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day01/second-java-project/src/main/java/com/bala/app/out/production/app/com/bala/app/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Day01/second-java-project/src/main/java/com/bala/app/out/production/app/com/bala/app/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +36,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/cygwin64/home/sfjbs/training/bala"
+    "last_opened_file_path": "C:/cygwin64/home/sfjbs/training/bala/Day02/first-spring-boot-app",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

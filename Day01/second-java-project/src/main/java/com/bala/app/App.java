@@ -15,5 +15,10 @@ public class App
         System.out.println(result);
         System.out.println(result1);
         System.out.println(result2);
+        Greeting greeting = new Greeting();
+        String result= greeting.SayWelcome();
+        String result= greeting.SayHello();
+        String result= greeting.SayBye();
+        System.out.println(result);
     }
 }
