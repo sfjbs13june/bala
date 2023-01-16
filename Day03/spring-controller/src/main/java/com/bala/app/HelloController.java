@@ -8,7 +8,7 @@ public class HelloController {
                 return "Hello From App";
             }
     @RequestMapping("/request/hello")
-    public String requesthello(){
+    public String RequestHello(){
         return "Hello from Request mapping";
     }
 }
