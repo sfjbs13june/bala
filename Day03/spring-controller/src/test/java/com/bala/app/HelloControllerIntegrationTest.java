@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest({HelloController.class})
+@WebMvcTest(HelloController.class)
 public class HelloControllerIntegrationTest {
     @Autowired
     private MockMvc mockMvc;
@@ -28,10 +28,11 @@ public class HelloControllerIntegrationTest {
     }
 
     @Test
-    public void testHelloControllerRequestHello() throws Exception {
-        ResultActions responseEntity  = mockMvc.perform(get("/request/hello"));
+    public void testHelloControllerIntegrationRequestHello() throws Exception
+    {
+        ResultActions responseEntity = mockMvc.perform(get("/request/hello"));
         responseEntity.andExpect(status().isOk());
-        String result = responseEntity.andReturn().getResponse().getContentAsString();
-        assertEquals("Hello from Request mapping", result);
+        String res=responseEntity.andReturn().getResponse().getContentAsString();
+        assertEquals("Hello from Request Mapping",res);
     }
 }

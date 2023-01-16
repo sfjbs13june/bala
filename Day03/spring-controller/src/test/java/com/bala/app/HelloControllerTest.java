@@ -1,6 +1,6 @@
 package com.bala.app;
+
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Test;
 
 
@@ -13,7 +13,7 @@ public class HelloControllerTest {
         Assert.assertEquals(expectedResult,result);
     }
     @Test
-    public void testrequestHello(){
+    public void testRequestHello(){
         String expectedResult= "Hello from Request Mapping";
         String result= helloController.RequestHello();
         Assert.assertEquals(expectedResult,result);
