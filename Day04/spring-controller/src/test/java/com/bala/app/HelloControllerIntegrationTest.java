@@ -20,19 +20,22 @@ public class HelloControllerIntegrationTest {
     private MockMvc mockMvc;
 
     @Test
-    public void testHelloControllerHello() throws Exception {
-        ResultActions responseEntity  = mockMvc.perform(get("/hello"));
-        responseEntity.andExpect(status().isOk());
-        String result = responseEntity.andReturn().getResponse().getContentAsString();
-        assertEquals("Hello from App", result);
-    }
-
-    @Test
-    public void testHelloControllerIntegrationRequestHello() throws Exception
+    public void testHelloControlleSendmessage() throws Exception
     {
-        ResultActions responseEntity = mockMvc.perform(get("/request/hello"));
+        String message="hi";
+        ResultActions responseEntity = mockMvc.perform(get("/send/"+message));
         responseEntity.andExpect(status().isOk());
-        String res=responseEntity.andReturn().getResponse().getContentAsString();
-        assertEquals("Hello from Request Mapping",res);
+        String result=responseEntity.andReturn().getResponse().getContentAsString();
+        System.out.println(result);
+        assertEquals("send message "+message,result);
+    }
+    @Test
+    public void testHelloControllerWelcome1() throws Exception
+    {
+        String name="world";
+        ResultActions responseEntity = mockMvc.perform(get("/welcome1").param("name",name));
+        responseEntity.andExpect(status().isOk());
+        String result=responseEntity.andReturn().getResponse().getContentAsString();
+        assertEquals("Welcome to"+name,result);
     }
 }
