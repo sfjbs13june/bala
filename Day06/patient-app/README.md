@@ -26,3 +26,5 @@ curl --location --request POST 'localhost:8080/patient/save' \
 }'
 ~~~
 curl --location --request PUT 'localhost:8080/patient/update?disease=cold' 
+
+~~~
