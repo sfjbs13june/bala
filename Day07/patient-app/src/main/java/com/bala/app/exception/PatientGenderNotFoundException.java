@@ -1,4 +1,4 @@
-package com.bala.app;
+package com.bala.app.exception;
 
 public class PatientGenderNotFoundException extends Throwable {
 

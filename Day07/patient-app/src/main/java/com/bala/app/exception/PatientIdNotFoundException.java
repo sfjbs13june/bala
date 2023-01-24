@@ -1,4 +1,4 @@
-package com.bala.app;
+package com.bala.app.exception;
 
 public class PatientIdNotFoundException extends Exception{
 
@@ -6,3 +6,4 @@ public class PatientIdNotFoundException extends Exception{
         super(message);
     }
 }
+
