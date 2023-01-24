@@ -20,8 +20,8 @@ public class StudentController {
         Student  student3= new Student("sai", "1", "10", "xyz");
 
         listStudents.add(student1);
-        listStudents.add(student1);
-        listStudents.add(student1);
+        listStudents.add(student2);
+        listStudents.add(student3);
         return  listStudents;
     }
 
