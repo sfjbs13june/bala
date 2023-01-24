@@ -2,12 +2,19 @@
 Import the project on either eclipse or intellij as a maven import project
 
 ## Building
-
-### Maven
-This project is maven project which will be build using maven command.
-
 ```
 $ mvn clean install
+```
+## Run the Application
+~~~
+mvn spring-boot:run
+~~~
+## Test Application
+
+```  
+Get List =  curl --location --request GET 'localhost:8080/get/students' \
+
+Get Map =  curl --location --request GET 'localhost:8080/map/students' \
 ```
 
 ## Dockerization
