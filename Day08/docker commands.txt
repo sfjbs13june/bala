@@ -1,0 +1,7 @@
+docker stop <containerid>
+docker rm <container-ID>
+docker ps -a
+docker login
+docker images
+docker push  <REPOSITORY>:<TAG>
+docker run <Repository>:<tag>
