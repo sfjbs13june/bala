@@ -8,7 +8,7 @@ artemis-demo-producer> mvn spring-boot:run
 
 # Send some message though producer
 
-curl -X GET http://localhost:1230/send?msg=bala
+curl -X GET http://localhost:1230/send/message?name=test&age=10
 
 # Start consumer
 artemis-demo-consumer> mvn spring-boot:run
