@@ -1,24 +1,11 @@
 package com.bala.app.model;
 
-public class Prescription
-{
+public class Prescription {
     private String prescriptionId;
     private String appointmentId;
     private String description;
     private String patientName;
     private String doctorName;
-
-    public Prescription()
-    {
-    }
-
-    public Prescription(String prescriptionId, String appointmentId, String description, String patientName, String doctorName) {
-        this.prescriptionId = prescriptionId;
-        this.appointmentId = appointmentId;
-        this.description = description;
-        this.patientName = patientName;
-        this.doctorName = doctorName;
-    }
 
     public String getPrescriptionId() {
         return prescriptionId;
@@ -59,4 +46,19 @@ public class Prescription
     public void setDoctorName(String doctorName) {
         this.doctorName = doctorName;
     }
+
+    public Prescription(String prescriptionId, String appointmentId, String description, String patientName, String doctorName) {
+        this.prescriptionId = prescriptionId;
+        this.appointmentId = appointmentId;
+        this.description = description;
+        this.patientName = patientName;
+        this.doctorName = doctorName;
+    }
+    public Prescription()
+    {
+
+    }
+
+
+
 }
