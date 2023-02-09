@@ -1,12 +1,23 @@
 package com.bala.app.model;
 
 public class Appointment {
-    private String appointmentId;
-    private String patientName;
-    private String doctorName;
-    private String date;
-    private Prescription prescription;
+    String appointmentId;
+    String patientName;
+    String doctorName;
+    String date;
+    Prescription prescription;
 
+    public Appointment() {
+
+    }
+
+    public Appointment(String appointmentId, String patientName, String doctorName, String date, Prescription prescription) {
+        this.appointmentId = appointmentId;
+        this.patientName = patientName;
+        this.doctorName = doctorName;
+        this.date = date;
+        this.prescription = prescription;
+    }
     public String getAppointmentId() {
         return appointmentId;
     }
@@ -45,18 +56,6 @@ public class Appointment {
 
     public void setPrescription(Prescription prescription) {
         this.prescription = prescription;
-    }
-
-    public Appointment(String appointmentId, String patientName, String doctorName, String date, Prescription prescription) {
-        this.appointmentId = appointmentId;
-        this.patientName = patientName;
-        this.doctorName = doctorName;
-        this.date = date;
-        this.prescription = prescription;
-    }
-    public Appointment()
-    {
-
     }
 
 }

@@ -1,7 +1,7 @@
 version: '3'
 services:
   mongo-app:
-    image: balasaikrishna/hospital-management-app:0.0.1-SNAPSHOT
+    image: balasaikrishna123/hospital-management-app:0.0.1-SNAPSHOT
     ports:
       - "8083:8083"
     environment:

@@ -5,22 +5,22 @@ import com.bala.app.repository.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
-
 @RestController
-@RequestMapping(value = "doctor")
+@RequestMapping("/doctor")
 public class DoctorController {
     @Autowired
-    AppointmentRepository appointmentRepo;
-    @RequestMapping(value = "doctorappointment",method = RequestMethod.GET)
+    AppointmentRepository appointmentRepository;
+    @GetMapping("/doctor-appointment")
     public List<Appointment> getAppointments(@RequestParam String doctorName){
-
-        return appointmentRepo.findBydoctorName(doctorName);
+        return appointmentRepository.findByDoctorName(doctorName);
     }
-    @RequestMapping(value = "save",method = RequestMethod.POST)
+    @PostMapping("/save")
     public Appointment saveAppointment(@RequestBody Appointment appointment){
-        appointment = appointmentRepo.save(appointment);
+        appointment=appointmentRepository.save(appointment);
         return appointment;
     }
+
 }
