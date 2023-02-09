@@ -1,6 +1,6 @@
 package com.bala.app;
 
-import com.bala.app.component.PrescriptionController;
+import com.bala.app.controller.PrescriptionController;
 import com.bala.app.model.Prescription;
 import com.bala.app.repository.PrescriptionRepository;
 import org.junit.Test;

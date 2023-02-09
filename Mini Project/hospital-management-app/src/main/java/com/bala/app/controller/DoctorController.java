@@ -1,4 +1,4 @@
-package com.bala.app.component;
+package com.bala.app.controller;
 
 import com.bala.app.model.Appointment;
 import com.bala.app.repository.AppointmentRepository;
@@ -8,17 +8,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/patient")
-public class PatientController {
+@RequestMapping("/doctor")
+public class DoctorController {
     @Autowired
     AppointmentRepository appointmentRepository;
-    @RequestMapping(value = "/myappointment",method = RequestMethod.GET)
-    public List<Appointment> getMyAppointments(@RequestParam String patientName){
-        return appointmentRepository.findByPatientName(patientName);
+    @GetMapping("/doctor-appointment")
+    public List<Appointment> getAppointments(@RequestParam String doctorName){
+        return appointmentRepository.findByDoctorName(doctorName);
     }
-    @RequestMapping(value = "/save",method = RequestMethod.POST)
+    @PostMapping("/save")
     public Appointment saveAppointment(@RequestBody Appointment appointment){
         appointment=appointmentRepository.save(appointment);
         return appointment;
     }
+
 }

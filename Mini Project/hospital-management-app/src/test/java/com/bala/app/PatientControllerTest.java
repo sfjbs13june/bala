@@ -1,6 +1,6 @@
 package com.bala.app;
 
-import com.bala.app.component.PatientController;
+import com.bala.app.controller.PatientController;
 import com.bala.app.model.Appointment;
 import com.bala.app.repository.AppointmentRepository;
 import org.junit.Test;
