@@ -43,15 +43,16 @@ docker rmi <IMAGE-ID>
 
 ### Doctor Controller
 ``` 
-curl --location --request GET 'localhost:8081/patient/myappointment?patientName=xyz' \
---header 'Authorization: Basic UGF0aWVudDpwYXRpZW50' \
---header 'Cookie: JSESSIONID=BA15E08B8C532E2F4C2FCD8CD494D711'
-
-
-curl --location --request POST 'localhost:8081/patient/save' \
---header 'Authorization: Basic UGF0aWVudDpwYXRpZW50' \
+curl --location --request GET 'http://localhost:8081/doctor/doctor-appointment?doctorName=abc' \
+--header 'Authorization: Basic RG9jdG9yOmRvY3Rvcg==' \
 --header 'Content-Type: application/json' \
---header 'Cookie: JSESSIONID=BA15E08B8C532E2F4C2FCD8CD494D711' \
+--header 'Cookie: JSESSIONID=088CCFAC5D7CA08B1DC41C25E3979DBC'
+
+
+curl --location --request POST 'localhost:8081/doctor/save' \
+--header 'Authorization: Basic RG9jdG9yOmRvY3Rvcg==' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=088CCFAC5D7CA08B1DC41C25E3979DBC' \
 --data-raw '{
     "appointmentId":"123",
     "patientName":"xyz",
@@ -95,19 +96,22 @@ curl --location --request POST 'localhost:8081/patient/save' \
 
 ### Prescription Controller
 ``` 
-curl --location --request GET 'localhost:8081/prescription/view-prescription?patientName=xyz' \
---header 'Authorization: Basic UGF0aWVudDpwYXRpZW50' \
---header 'Cookie: JSESSIONID=BA15E08B8C532E2F4C2FCD8CD494D711'
-
-
-curl --location --request POST 'localhost:8081/prescription/saveprescription' \
+curl --location --request GET 'http://localhost:8081/prescription/view-prescription?patientName=cba' \
+--header 'Authorization: Basic RG9jdG9yOmRvY3Rvcg==' \
 --header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=088CCFAC5D7CA08B1DC41C25E3979DBC'
+
+
+curl --location --request POST 'http://localhost:8081/prescription/save-prescription' \
+--header 'Authorization: Basic RG9jdG9yOmRvY3Rvcg==' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=088CCFAC5D7CA08B1DC41C25E3979DBC' \
 --data-raw '{
-    "prescriptionId":"67",
-    "appointmentId":"123",
-    "description":"cough",
-    "patientName":"xyz",
-    "doctorName":"abc"
+  "prescriptionId": "11",
+  "appointmentId": "2",
+  "description": "cold",
+  "doctorName": "yxz",
+  "patientName": "cba"
 }'
 ```
 

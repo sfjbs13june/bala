@@ -2,6 +2,7 @@ package com.bala.app;
 
 import com.bala.app.controller.PatientController;
 import com.bala.app.model.Appointment;
+import com.bala.app.model.Prescription;
 import com.bala.app.repository.AppointmentRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -35,19 +36,35 @@ public class PatientControllerTest {
     }
 
     @Test
-    public void Test1(){
-        List test=new ArrayList();
-        when(appointmentRepository.findByPatientName(anyString())).thenReturn(test);
-        List result=patientController.getMyAppointments("xyz");
-        assertEquals(test,result);
+    public void TestGetAppointments() {
+        List<Appointment> getMyAppointment = new ArrayList();
+        Prescription prescription1 = new Prescription("p01","a02","cold","pat01","02");
+        Appointment appointmentpatient = new Appointment("a02","pat01","doc02","11 august",prescription1);
+        getMyAppointment.add(appointmentpatient);
+        when(appointmentRepository.findByPatientName(anyString())).thenReturn(getMyAppointment);
+        List<Appointment> result = patientController.getMyAppointments("pat01");
+        assertEquals(getMyAppointment.size(), 1);
+        assertEquals(getMyAppointment.size(), 1);
+        assertEquals(getMyAppointment.get(0).getAppointmentId(),result.get(0).getAppointmentId());
+        assertEquals(getMyAppointment.get(0).getDate(),result.get(0).getDate());
+        assertEquals(getMyAppointment.get(0).getPatientName(),result.get(0).getPatientName());
+        assertEquals(getMyAppointment.get(0).getDoctorName(),result.get(0).getDoctorName());
+        assertEquals(getMyAppointment.get(0).getPrescription().getDescription(),result.get(0).getPrescription().getDescription());
     }
-
     @Test
-    public void Test2(){
-        Appointment ap1=new Appointment();
-        when(appointmentRepository.save(any(Appointment.class))).thenReturn(ap1);
-        Appointment result=patientController.saveAppointment(appointment);
-        assertEquals(ap1,result);
+    public void TestSaveAppointment() {
+        Appointment savePatientAppointment=new Appointment();
+        savePatientAppointment.setAppointmentId("a03");
+        savePatientAppointment.setDate("11 august");
+        savePatientAppointment.setDoctorName("doc04");
+        savePatientAppointment.setPatientName("pat04");
+        when(appointmentRepository.save(any(Appointment.class))).thenReturn(savePatientAppointment);
+        Appointment result = patientController.saveAppointment(appointment);
+        assertEquals(savePatientAppointment.getAppointmentId(), result.getAppointmentId());
+        assertEquals(savePatientAppointment.getDate(), result.getDate());
+        assertEquals(savePatientAppointment.getDoctorName(),result.getDoctorName());
+        assertEquals(savePatientAppointment.getPatientName(), result.getPatientName());
+
     }
 
 }
