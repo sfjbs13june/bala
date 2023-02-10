@@ -43,13 +43,13 @@ docker rmi <IMAGE-ID>
 
 ### Doctor Controller
 ``` 
-curl --location --request GET 'localhost:8081/doctor/doctor-appointment?doctorName=abc' \
---header 'Authorization: Basic RG9jdG9yOmRvY3Rvcg==' \
+curl --location --request GET 'localhost:8081/patient/myappointment?patientName=xyz' \
+--header 'Authorization: Basic UGF0aWVudDpwYXRpZW50' \
 --header 'Cookie: JSESSIONID=BA15E08B8C532E2F4C2FCD8CD494D711'
 
 
-curl --location --request POST 'localhost:8081/doctor/save' \
---header 'Authorization: Basic RG9jdG9yOmRvY3Rvcg==' \
+curl --location --request POST 'localhost:8081/patient/save' \
+--header 'Authorization: Basic UGF0aWVudDpwYXRpZW50' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: JSESSIONID=BA15E08B8C532E2F4C2FCD8CD494D711' \
 --data-raw '{
